@@ -15,7 +15,7 @@ namespace EFCore_WebAPICore.Models
         // [Column("blog_id")] -muda o nome de criação no banco de dados
         // [Column(TypeName = "varchar(200)")] -define um tipo e tamanho da coluna
         // [Comment("The URL of the blog")] -add comentarios no banco
-        // [MaxLength(500)] -define um tamanho maximo  
+        // [MaxLength(500)] -define um tamanho maximo para strings
 
         public int Id { get; set; }
 

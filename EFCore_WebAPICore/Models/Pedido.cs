@@ -12,7 +12,6 @@ namespace EFCore_WebAPICore.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatótio")]
-        [MaxLength(10)]
         public int Codigo { get; set; }
 
         [Required(ErrorMessage = "Este campo é obrigatótio")]
