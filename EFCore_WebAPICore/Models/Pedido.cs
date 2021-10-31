@@ -18,6 +18,6 @@ namespace EFCore_WebAPICore.Models
         [Required(ErrorMessage = "Este campo é obrigatótio")]
         public int ClienteId { get; set; }
         public Cliente Cliente { get; set; }
-        public List<PedidoProduto> PedidoProdutos { get; set; } // N para N
+        public List<PedidoProduto> PedidoProdutos { get; set; } // M para M
     }
 }
