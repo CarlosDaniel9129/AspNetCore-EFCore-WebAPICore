@@ -9,10 +9,13 @@ namespace EFCore_WebAPICore.Models
     public class Produto
     {
         public int Id { get; set; }
+
         [Required(ErrorMessage = "Este campo é obrigatótio")]
         public string Nome { get; set; }
+
         [Required(ErrorMessage = "Este campo é obrigatótio")]
         public decimal Preco { get; set; }
+
         public List<PedidoProduto> PedidoProdutos { get; set; } // M para M
     }
 }
