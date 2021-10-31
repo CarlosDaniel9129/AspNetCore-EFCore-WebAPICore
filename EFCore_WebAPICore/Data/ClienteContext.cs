@@ -1,7 +1,10 @@
 ﻿using EFCore_WebAPICore.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,13 +19,12 @@ namespace EFCore_WebAPICore.Data
         // -deve-se dizer ao entity que esta sendo usado M para M, uso de chave composta
         public DbSet<PedidoProduto> PedidoProdutos { get; set; }
 
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
 
             // -é possivel usar essa capacidade devido ao Entity.SQLServer que está em uso nas dependencias
-
+            
             // -pode se colocar qualquer name em Catalog que o banco é criado sozinho
             optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=EFWebAPI;Integrated Security=True");
         }
