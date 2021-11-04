@@ -20,7 +20,15 @@ namespace EFCore_WebAPICore.Controllers
         [Route("")]
         public async Task<ActionResult<List<Cliente>>> Get()
         {
-            var clientes = await _context.Clientes.ToListAsync();
+            var clientes = await _context.Clientes.AsNoTracking().Include(p => p.Pedidos).ToListAsync();
+            return clientes;
+        }
+
+        [HttpGet]
+        [Route("{id:int}")]
+        public async Task<ActionResult<List<Cliente>>> GetById(int id)
+        {
+            var clientes = await _context.Clientes.AsNoTracking().Include(p => p.Pedidos).Where(c => c.Id == id).ToListAsync();
             return clientes;
         }
 
