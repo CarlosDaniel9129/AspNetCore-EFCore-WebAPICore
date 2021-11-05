@@ -11,18 +11,18 @@ namespace EFCore_WebAPICore.Models
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Este campo é obrigatótio")]
+        [Required(ErrorMessage = "Este campo é obrigatório")]
         public int Codigo { get; set; }
 
-        [Required(ErrorMessage = "Este campo é obrigatótio")]
+        [Required(ErrorMessage = "Este campo é obrigatório")]
         [Column(TypeName = "varchar(200)")]
         public string Descricao { get; set; }
 
-        [Required(ErrorMessage = "Este campo é obrigatótio")]
+        [Required(ErrorMessage = "Este campo é obrigatório")]
         [Column(TypeName = "varchar(100)")]
         public string Endereco { get; set; }
 
-        [Required(ErrorMessage = "Este campo é obrigatótio")]
+        [Required(ErrorMessage = "Este campo é obrigatório")]
         public int ClienteId { get; set; }
 
         public Cliente Cliente { get; set; }

@@ -11,11 +11,11 @@ namespace EFCore_WebAPICore.Models
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Este campo é obrigatótio")]
+        [Required(ErrorMessage = "Este campo é obrigatório")]
         [Column(TypeName = "varchar(100)")]
         public string Nome { get; set; }
 
-        [Required(ErrorMessage = "Este campo é obrigatótio")]
+        [Required(ErrorMessage = "Este campo é obrigatório")]
         public decimal Preco { get; set; }
 
         public List<PedidoProduto> PedidoProdutos { get; set; } // M para M
